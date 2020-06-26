@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>All dishes</title>
+  </head>
+  <body>
+  <a href="/admin-dashboard" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back </a><br/>
+    <h1>All Dishes</h1>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Type</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Price</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i=1;i<=data.length;i++){ %>
+          <tr>
+            <th scope="row"><%= i %></th>
+            <td><%=data[i-1].name %></td>
+            <td><img src="<%=data[i-1].img_src %>" height="40px"></td>
+            <td><%=data[i-1].type %></td>
+            <td><%=data[i-1].genre %></td>
+            <td><%=data[i-1].price %></td>
+            <td><a href="/admin-profile/edit-dish/<%= data[i-1]._id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Edit</a></td>
+            <td><a href="/admin-profile/delete-dish/<%= data[i-1]._id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Delete</a></td>
+
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

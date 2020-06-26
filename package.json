@@ -1,0 +1,15 @@
+{
+  "name": "tasteking",
+  "version": "1.0.0",
+  "description": "my food ordering website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Satrunjay Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "express-session": "^1.17.1",
+    "nodemon": "^2.0.4"
+  }
+}

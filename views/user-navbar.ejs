@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fdfdfd; ">
+    <a class="navbar-brand col-3" href="#" style="color:rgb(21, 131, 146);">
+        <img src="/images/img18.png" width="40" height="30" alt=""> Taste-King
+      </a>
+      <div class="col-6 justify-content-between d-inline"  >
+        <form class="form-inline my-2 my-lg-0">
+             <input class="form-control mr-sm-2 col-6" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         </form>
+         </div>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent" style="position: relative; right:50px;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img style="width:30px; height:30px; border-radius:50%; margin-right: 10px;" src="<%=data.profile_img %>">Profile
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/Taste-King/user-profile/profile-info/<%=data._id %>">profile info</a>
+            <a class="dropdown-item" href="/Taste-King/user-profile/edit-user/<%= data._id %>">Edit profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/Taste-King/user/logout">Log out!</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/Taste-King/user-profile/<%=data._id %>">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Taste-King/About-us/<%=data._id %>">About us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="/Taste-King/user-profile/cart/<%=data._id %>">Cart(<%=len %>)</a>
+        </li>
+          
+      </ul>
+    </div>
+  </nav>

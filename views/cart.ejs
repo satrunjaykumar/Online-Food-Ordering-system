@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Cart</title>
+  </head>
+  <body>
+    <%- include ('user-navbar.ejs') %>
+    <div style="width:800px; margin:auto;">
+        <div id="imp">
+                <h2 style="position:relative; left:300px;"> YOUR CART</h2>
+                <% if(items.length==0){ %>
+                <p id="start">You haven't added anything to your cart yet! Start adding your favourtie dishes</p>
+                <% } else {%>
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">price(per quantity)</th>  
+                            <th scope="col">quantity</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i=1;i<=items.length;i++){ %>
+                                
+                                <tr>
+                                    <th scope="row"><%=i %></th>
+                                    <td><%= items[i-1].item_name %></td>
+                                    <td id="price<%= i%>"><%= items[i-1].price %></td>
+                                    <td id="quantity<%= i%>"><input id="qty<%=i %>"  class="quan" type="number" value='1' min="1" style="width:50px;"></td>
+                                    <td><a href="/Taste-King/user-profile/delete/<%=data._id%>/<%=items[i-1].item_id%>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</a></td>
+                                  </tr>
+                           <% } %>
+                              
+                           <tr class="thead-dark"> 
+                             <th scope="row" colspan="2" class="ml-0">Total</th>
+                             <td id="total" class="table-dark" colspan="3"></td>
+                           </tr>
+                        </tbody>
+                      </table>
+                      <a href="/Taste-King/user-profile/cart/order-now/<%=items[0].user_id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="width:800px;">Order Now</a>
+
+                      <% } %>
+           
+        </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        function calc_total(){
+          var x= <%= items.length%>;
+          var total=0;
+          for(var i=0;i<x;i++){
+             var price= $("#price"+(i+1)).text();
+             var quant= $("#qty"+(i+1)).val();
+             total+=(price * quant);
+          }
+          $("#total").text(total);
+        }
+        calc_total();
+        $(".quan").change(function(){
+          calc_total();
+        });
+        
+      });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

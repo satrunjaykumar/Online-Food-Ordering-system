@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #photo1{
+      width:100%;
+     }
+    #div1{
+	 background-color:rgb(249,247,242);
+	 margin-top:0;
+	 text-align:center;
+     }
+     #div1 p{padding-left:40px;
+       } 
+       p{
+    line-height:200%;
+    letter-spacing:2px; 
+    font-size:18px;
+      }
+      #info{
+	height:400px;
+	padding-top:100px;
+    text-align:center;
+    width:1200px;
+	margin-left:150px;
+	font-family:Georgia;
+      }
+    #info h2{color:rgb(0,100,145);}
+    #miss{
+	background-color:rgb(0,100,145);
+	color:white;
+	line-height:120%;
+	padding:40px 40px;
+	padding-left:100px;
+    }
+     #miss h2{text-align:center;}
+    </style>
+    <title>About us</title>
+  </head>
+  <body>
+    <%- include ('user-navbar.ejs') %>
+    <div id="div1">
+        <img src="/images/img19.jpg" id="photo1">
+        
+           <p>For us, it's not just about bringing you food. It's about making a connection, which is 
+         why we sit down with the chefs, dreaming up menus that willl arrive fresh and full of flavor.
+         Try us! You can always count on us.
+      </p>
+    </div>
+    <div id="info">
+	    <h2>OWNER INFORMATION</h2>
+		<p>This Website is created by Satrunjay Kumar.
+		   They both are currently persuing Bachelor of Technology in Infomation 
+		   Technology from Vellore Institute of Technology, Vellore,India. This Website
+		   is actually a Web Technology Project given by professor Vijyan R.
+		 </p>
+		 <p>For any query Email us on: <span>satrunjay.kumar2018@vitstudent.ac.in</span></p>
+      </div>
+      
+      <div id="miss">
+        <h2>OUR MISSION</h2>
+        <p>"Bringing good food into your everyday. That's our mission.</p>
+        <p>    That means we don't just deliver--we bring it, always going 
+            the extra mile to make your experience memorable.</p>
+        <p>And it means this is delicious food you can enjoy everyday: from vibrant salads 
+            for healthy office lunches, to indulgent family-sized pizzas, to fresh
+            sushi for a romantic night in. Whatever you crave, we can help."
+        </p>		 
+     </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

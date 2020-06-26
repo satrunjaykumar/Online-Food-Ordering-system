@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Home Page</title>
+	  <link rel="stylesheet" type="text/css" href="/css/HomePage.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <body >
+      <div id="navigation">
+		 <table>
+		 <tr>
+		 <td><span id="name"><img class="logo"src="/images/img18.png"></span></td>
+		 <td><span id="name">Taste-King</span></td>
+		 <td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+	     <td> <a class="links1" id="ab0"  href="/" >Home</a></td>
+		 <td> <a class="links1" id="ab1"  href="#" >Login</a></td>
+		 <td> <a class="links1" id="ab2" href="/userlogin/new-user">Create an account </a></td>
+		 <td> <a class="links1" id="ab5" href="#aboutus">AboutPage</a></td>
+		 </tr>
+		 </table>
+	  </div>
+      <div>
+	     <button id="btn3" >X</button></br>	 
+      </div>	  
+	  <div id="main">
+	    <span><img src="/images/img10.jpg" class="image"></span>
+		<span><img src="/images/img9.jpg" class="image"></span>
+		<span><img src="/images/img12.jpg" class="image"></span>
+		<span><img src="/images/img13.jpg" class="image"></span>
+	  </div>
+	  <div id="aboutus">
+	    <h2 id="head1"> ABOUT US</h2>
+		<p>For us, it's not just about bringing you food. It's about making a connection, which is 
+		   why we sit down with the chefs, dreaming up menus that willl arrive fresh and full of flavor.
+		   Try us! You can always count on us.
+		</p>
+        <button id="bt1" >Learn More</button>
+	  </div>
+	  <div id="box">
+	  <div id="contact">
+	     <h2 id="head2">CONTACT</h2>
+		 <p style="color:white"> It's food lovers like you who inspire us to do what
+		 we do. Your comments, ideas and questions push us to go that 
+		 extra mile,every time so drop us a line!
+		 </p>
+		 <label style="color:white"> Enter your comments and reviews here!</label>
+		  <textarea rows="4" cols="60" id="comment">
+		  </textarea></br>
+		  <button id="bt2">Submit</button>
+		  <h3 id="head3"> Recent comments</h3>
+	  </div>
+	  </div>
+	  <div class="loginbox">
+	     <button id="close" >X</button>
+	     <img src="/images/avatar2.png" class="avatar" >
+		    <h1>Login Here</h1>
+			<form action="/Taste-King/user-profile/" method="post" >
+			   <% if(typeof msg!=='undefined') { %>
+				<font color="red"><%= msg %></font>
+				<% } %>
+			   <p>Username</p>
+			   <input type="text" name="username" placeholder="Enter User name">
+			   <p>Password</p>
+			   <input type="password" name="password" placeholder="Enter Password">
+			   <input type="submit" name="value" id="subt"value="Login" >
+			   <a href="/userlogin/new-user">Don't have an account?</a>
+			</form>
+      </div>
+	  <div id="footer1">
+		       <div id="ftr">BITS N BITES</div>
+			   <div id="end">
+			   <p>Follow Us:</p>
+			   <a href=""><img src="/images/img15.png" class="image2"></a>
+			   <a href=""><img src="/images/img16.jpg" class="image2"></a>
+		       <a href=""><img src="/images/img18.jpg" class="image2"></a>
+			   <p>&#169; 2019</p>
+			   </div>
+	  </div>
+	  <script type="text/javascript" src="/js/HomePage.js"></script>
+   </body>
+</html>

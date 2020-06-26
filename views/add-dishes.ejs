@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <title>add dishes</title>
+  </head>
+  <body>
+    <h1 style=" text-align:center; color:rgb(26, 111, 145)";>Add Dish</h1>
+    <div style="margin:auto ; width:700px; border-style:solid; padding:20px; border-color: rgb(35, 116, 153); border-radius: 12px;">
+        <form method="post" action="/admin-profile/add-dishes" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Name of the Dish</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="enter the name of the dish">
+            </div>
+            <div class="form-group">
+              <label for="Select type of Dish">Select type of Dish</label>
+              <select class="form-control" name="type" id="exampleFormControlSelect1">
+                <option>Veg</option>
+                <option>Non-Veg</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="Select the Genre of Dish" >Select the Genre of Dish</label>
+                <select class="form-control" name="genre" id="exampleFormControlSelect1">
+                  <option>Main Course</option>
+                  <option>Baverage</option>
+                  <option>Desert</option>
+                </select>
+              </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Price of the Dish</label>
+                <input type="text" class="form-control" name="price" id="exampleFormControlInput1" placeholder="enter the Price per plate for the dish">
+              </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">select image for your Dish</label>
+                <input type="file" name="dish_img" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All Dishes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#veg" role="tab" aria-controls="veg" aria-selected="false">All Veg Dishes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#nonveg" role="tab" aria-controls="nonveg" aria-selected="false">All Non Veg Dishes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#baverage" role="tab" aria-controls="baverage" aria-selected="false">All baverage Dishes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#desert" role="tab" aria-controls="desert" aria-selected="false">All Desert Dishes</a>
+      </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+        <div style="margin-left:220px;margin-top: 30px;">
+        <% for(var i=1;i<=all.length;i++){  %>
+            
+            <div class="card-deck" style="margin-bottom:30px;">
+           <%  for(var j=i;j<=all.length;j++){ if(j>i+2){break;} %>
+           <div class="card col-3">
+            <img class="card-img-top"  height:200px" src="<%= all[j-1].img_src %>" alt="Card image cap" style="width:300px; height:200px;">
+            <div class="card-body">
+              <h5 class="card-title"><%= all[j-1].name %></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Price: Rs <%= all[j-1].price %></li>
+            </ul>
+            <div class="card-footer">
+              <small><a href="/Taste-King/user-profile/<%=data._id %>/<%=all[j-1]._id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="display: block; margin:auto;"> Add to Cart </a></small>
+            </div>
+           </div>
+        <% } i=j-1;%></div>
+          <% } %>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="veg" role="tabpanel" aria-labelledby="veg-tab">
+        <div style="margin-left:220px;margin-top: 30px;">
+            <% for(var i=1;i<=veg.length;i++){  %>
+                
+                <div class="card-deck" style="margin-bottom:30px;">
+               <%  for(var j=i;j<=veg.length;j++){ if(j>i+2){break;} %>
+               <div class="card col-3">
+                <img class="card-img-top" style="width:300px; height:200px;"" src="<%= veg[j-1].img_src %>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><%= veg[j-1].name %></h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Price: Rs <%= veg[j-1].price %></li>
+                </ul>
+                <div class="card-footer">
+                  <small><a href="/Taste-King/user-profile/<%=data._id %>/<%=veg[j-1]._id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="display: block; margin:auto;"> Add to Cart </a></small>
+                </div>
+               </div>
+            <% } i=j-1;%></div>
+              <% } %>
+            </div>
+    </div>
+    <div class="tab-pane fade" id="nonveg" role="tabpanel" aria-labelledby="nonveg-tab">
+        <div style="margin-left:220px;margin-top: 30px;">
+            <% for(var i=1;i<=nonveg.length;i++){  %>
+                
+                <div class="card-deck" style="margin-bottom:30px;">
+               <%  for(var j=i;j<=nonveg.length;j++){ if(j>i+2){break;} %>
+               <div class="card col-3">
+                <img class="card-img-top" style="width:300px; height:200px" src="<%= nonveg[j-1].img_src %>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><%= nonveg[j-1].name %></h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Price: Rs <%= nonveg[j-1].price %></li>
+                </ul>
+                <div class="card-footer">
+                  <small><a href="/Taste-King/user-profile/<%=data._id %>/<%=nonveg[j-1]._id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="display: block; margin:auto;"> Add to Cart </a></small>
+                </div>
+               </div>
+            <% } i=j-1; %></div>
+              <% } %>
+            </div>
+    </div>
+    <div class="tab-pane fade" id="baverage" role="tabpanel" aria-labelledby="baverage-tab">
+        <div style="margin-left:220px;margin-top: 30px;">
+            <% for(var i=1;i<=baverage.length;i++){  %>
+                
+                <div class="card-deck" style="margin-bottom:30px;">
+               <%  for(var j=i;j<=baverage.length;j++){ if(j>i+2){break;} %>
+               <div class="card col-3">
+                <img class="card-img-top" style="width:300px; height:200px" src="<%= baverage[j-1].img_src %>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><%= baverage[j-1].name %></h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Price: Rs <%= baverage[j-1].price %></li>
+                </ul>
+                <div class="card-footer">
+                  <small><a href="/Taste-King/user-profile/<%=data._id %>/<%=baverage[j-1]._id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="display: block; margin:auto;"> Add to Cart </a></small>
+                </div>
+               </div>
+            <% } i=j-1; %>
+            </div>
+              <% } %>
+            </div>
+    </div>
+    <div class="tab-pane fade" id="desert" role="tabpanel" aria-labelledby="desert-tab">
+        <div style="margin-left:220px;margin-top: 30px;">
+            <% for(var i=1;i<=desert.length;i++){  %>
+                
+                <div class="card-deck" style="margin-bottom:30px;">
+               <%  for(var j=i;j<=desert.length;j++){ if(j>i+2){break;} %>
+               <div class="card col-3">
+                <img class="card-img-top" style="width:300px; height:200px" src="<%= desert[j-1].img_src %>" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><%= desert[j-1].name %></h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Price: Rs <%= desert[j-1].price %></li>
+                </ul>
+                <div class="card-footer">
+                  <small><a href="/Taste-King/user-profile/<%=data._id %>/<%=desert[j-1]._id %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="display: block; margin:auto;"> Add to Cart </a></small>
+                </div>
+               </div>
+            <% } i=j-1;%></div>
+              <% } %>
+            </div>
+    </div>
+
+  </div>
